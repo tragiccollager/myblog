@@ -12,6 +12,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts/' },
+      { text: '📝 写作', link: '/write' },
       { text: '关于', link: '/about' },
     ],
     
@@ -28,7 +29,7 @@ export default defineConfig({
     },
     
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourname' }
+      { icon: 'github', link: 'https://github.com/tragiccollager' }
     ],
     
     footer: {
