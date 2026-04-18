@@ -13,6 +13,16 @@ const tags = ref('')
 const description = ref('')
 const savedMessage = ref('')
 
+const placeholderText = `使用 Markdown 语法编写文章内容...
+
+支持：
+# 标题
+**粗体** *斜体*
+[链接](url)
+![图片](url)
+代码块
+- 列表项`
+
 // 生成文件名
 const generateFileName = () => {
   const date = new Date().toISOString().split('T')[0]
@@ -135,15 +145,7 @@ const previewContent = computed(() => {
       <textarea 
         v-model="content" 
         rows="20" 
-        placeholder="使用 Markdown 语法编写文章内容...
-
-支持：
-# 标题
-**粗体** *斜体* 
-[链接](url)
-![图片](url)
-```代码块```
-- 列表项"
+        :placeholder="placeholderText"
         class="form-textarea"
       ></textarea>
     </div>
